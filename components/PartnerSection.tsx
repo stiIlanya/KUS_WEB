@@ -76,17 +76,17 @@ const PartnersSection: React.FC = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, #3b82f6 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #161E54 1px, transparent 1px)',
           backgroundSize: '40px 40px'
         }}></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-10 px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-5 py-2 mb-4">
-            <Handshake className="w-4 h-4 text-blue-600" />
-            <p className="text-blue-700 font-semibold text-sm uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 bg-[#161E54]/5 border border-[#161E54]/20 rounded-full px-5 py-2 mb-4">
+            <Handshake className="w-4 h-4 text-[#161E54]" />
+            <p className="text-[#161E54] font-semibold text-sm uppercase tracking-wider">
               TRUSTED PARTNERS
             </p>
           </div>
@@ -96,7 +96,7 @@ const PartnersSection: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Kami bekerja sama dengan produsen peralatan listrik terkemuka dunia untuk memberikan solusi terbaik
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto rounded-full mt-6"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#161E54] to-[#2a3675] mx-auto rounded-full mt-6"></div>
         </div>
 
         {/* Animated Logo Carousel - First Row (Left to Right) */}
@@ -110,13 +110,13 @@ const PartnersSection: React.FC = () => {
               {duplicatedPartners.map((partner, index) => (
                 <div
                   key={`left-${index}`}
-                  className="flex-shrink-0 mx-8 group"
+                  className="flex-shrink-0 mx-8"
                 >
-                  <div className="w-48 h-24 bg-white rounded-xl border-2 border-gray-100 flex items-center justify-center p-4 transition-all duration-300 hover:border-blue-300 hover:shadow-lg hover:scale-105 group-hover:bg-blue-50">
+                  <div className="w-48 h-24 flex items-center justify-center p-4">
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-w-full max-h-full object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0"
+                      className="max-w-full max-h-full object-contain transition-transform duration-300 hover:scale-110"
                     />
                   </div>
                 </div>
@@ -136,13 +136,13 @@ const PartnersSection: React.FC = () => {
               {duplicatedPartners.map((partner, index) => (
                 <div
                   key={`right-${index}`}
-                  className="flex-shrink-0 mx-8 group"
+                  className="flex-shrink-0 mx-8"
                 >
-                  <div className="w-48 h-24 bg-white rounded-xl border-2 border-gray-100 flex items-center justify-center p-4 transition-all duration-300 hover:border-blue-300 hover:shadow-lg hover:scale-105 group-hover:bg-blue-50">
+                  <div className="w-48 h-24 flex items-center justify-center p-4">
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-w-full max-h-full object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0"
+                      className="max-w-full max-h-full object-contain transition-transform duration-300 hover:scale-110"
                     />
                   </div>
                 </div>
@@ -154,32 +154,32 @@ const PartnersSection: React.FC = () => {
         {/* Stats Section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center group cursor-pointer">
-            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#161E54] to-[#2a3675] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
               50+
             </div>
             <div className="text-gray-600 font-medium">Partner Brands</div>
-            <div className="h-1 w-16 bg-gradient-to-r from-blue-600 to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            <div className="h-1 w-16 bg-gradient-to-r from-[#161E54] to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
           </div>
           <div className="text-center group cursor-pointer">
-            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#161E54] to-[#2a3675] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
               100%
             </div>
             <div className="text-gray-600 font-medium">Genuine Products</div>
-            <div className="h-1 w-16 bg-gradient-to-r from-blue-600 to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            <div className="h-1 w-16 bg-gradient-to-r from-[#161E54] to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
           </div>
           <div className="text-center group cursor-pointer">
-            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#161E54] to-[#2a3675] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
               10+
             </div>
             <div className="text-gray-600 font-medium">Years Partnership</div>
-            <div className="h-1 w-16 bg-gradient-to-r from-blue-600 to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            <div className="h-1 w-16 bg-gradient-to-r from-[#161E54] to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
           </div>
           <div className="text-center group cursor-pointer">
-            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#161E54] to-[#2a3675] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
               24/7
             </div>
             <div className="text-gray-600 font-medium">Support Available</div>
-            <div className="h-1 w-16 bg-gradient-to-r from-blue-600 to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            <div className="h-1 w-16 bg-gradient-to-r from-[#161E54] to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
           </div>
         </div>
       </div>

@@ -130,7 +130,7 @@ const StatsSection = () => {
   }, []);
 
   return (
-    <section ref={ref} className="py-24 relative overflow-hidden bg-[#161E54]">
+    <section ref={ref} className="m-8 rounded-2xl py-24 relative overflow-hidden bg-[#161E54]">
       {/* Background Navy Gradient #161E54 */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#161E54] via-[#1a2363] to-[#0d1233] animate-gradient-shift"></div>
       

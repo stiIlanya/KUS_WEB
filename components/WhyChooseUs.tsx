@@ -72,24 +72,24 @@ const WhyChooseUs: React.FC = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, #3b82f6 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #161E54 1px, transparent 1px)',
           backgroundSize: '50px 50px'
         }}></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-10 px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-5 py-2 mb-4">
-            <Award className="w-4 h-4 text-blue-600" />
-            <p className="text-blue-700 font-semibold text-sm uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 bg-[#161E54]/5 border border-[#161E54]/20 rounded-full px-5 py-2 mb-4">
+            <Award className="w-4 h-4 text-[#161E54]" />
+            <p className="text-[#161E54] font-semibold text-sm uppercase tracking-wider">
               SOME REASONS
             </p>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Why Choose Us
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#161E54] to-[#2a3675] mx-auto rounded-full"></div>
         </div>
 
         {/* Features Grid */}
@@ -104,14 +104,14 @@ const WhyChooseUs: React.FC = () => {
             >
               <div className="flex items-center gap-4 group">
                 <div className="relative">
-                  <span className="text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-5xl font-bold bg-gradient-to-br from-[#161E54] to-[#2a3675] bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
                     {feature.number}
                   </span>
-                  <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full"></div>
+                  <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-[#161E54] to-[#2a3675] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full"></div>
                 </div>
-                <div className="h-px flex-1 bg-gradient-to-r from-blue-200 to-transparent"></div>
+                <div className="h-px flex-1 bg-gradient-to-r from-[#161E54]/20 to-transparent"></div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+              <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#161E54] transition-colors duration-300">
                 {feature.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">

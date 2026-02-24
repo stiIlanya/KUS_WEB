@@ -24,8 +24,8 @@ const HeroSection: React.FC = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-800/40 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 via-transparent to-blue-900/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2a3470]/80 via-blue-800/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2a3470]/50 via-transparent to-blue-900/50"></div>
       </div>
 
       {/* Content */}
@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-3xl mx-auto animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
-            PT Karya Usaha Sinergi menyediakan layanan instalasi dan perawatan sistem kelistrikan dengan standar keselamatan tinggi untuk berbagai kebutuhan industri dan komersial.
+            PT Karya Usaha Sini menyediakan layanan instalasi dan perawatan sistem kelistrikan dengan standar keselamatan tinggi untuk berbagai kebutuhan industri dan komersial.
           </p>
 
           {/* CTA Buttons */}
@@ -71,11 +71,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-white rounded-full animate-pulse"></div>
-        </div>
-      </div>
+      
 
       <style jsx>{`
         @keyframes fadeInUp {

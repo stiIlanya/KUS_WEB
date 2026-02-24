@@ -7,7 +7,7 @@ const CTASection: React.FC = () => {
   return (
     <section className="relative py-24 overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#161E54] via-[#1a2461] to-[#0f1640]"></div>
       
       {/* Animated Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -21,8 +21,8 @@ const CTASection: React.FC = () => {
       {/* Floating Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-2xl animate-pulse"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-blue-400/20 rounded-full blur-xl animate-float"></div>
-      <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-blue-300/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-[#2a3675]/20 rounded-full blur-xl animate-float"></div>
+      <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-[#3d4a8c]/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
@@ -34,29 +34,29 @@ const CTASection: React.FC = () => {
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fadeInUp">
             Percayakan Instalasi Listrik Anda kepada
-            <span className="block mt-2 bg-gradient-to-r from-blue-200 to-white bg-clip-text text-transparent">
+            <span className="block mt-2 bg-gradient-to-r from-[#2a3675] to-white bg-clip-text text-transparent">
               Profesional
             </span>
           </h2>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-blue-100 leading-relaxed animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-[#b8c1e8] leading-relaxed animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             Hubungi PT Karya Usaha Sinergi untuk solusi kelistrikan yang aman dan andal.
           </p>
 
           {/* CTA Button */}
           <div className="pt-4 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
-            <button className="group relative bg-white text-blue-600 px-12 py-5 rounded-xl font-bold text-lg overflow-hidden shadow-2xl hover:shadow-white/20 transition-all duration-500 hover:scale-105">
+            <button className="group relative bg-white text-[#161E54] px-12 py-5 rounded-xl font-bold text-lg overflow-hidden shadow-2xl hover:shadow-white/20 transition-all duration-500 hover:scale-105">
               <span className="relative z-10 flex items-center justify-center gap-3">
                 Hubungi Kami Sekarang
                 <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#f0f4ff] to-[#e6ecff] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </button>
           </div>
 
           {/* Contact Info */}
-          <div className="flex flex-wrap justify-center gap-8 pt-8 text-blue-100 animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
+          <div className="flex flex-wrap justify-center gap-8 pt-8 text-[#b8c1e8] animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
             <div className="flex items-center gap-2 hover:text-white transition-colors duration-300 cursor-pointer">
               <Phone className="w-5 h-5" />
               <span className="font-medium">1-800-777-1234</span>
