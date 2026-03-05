@@ -133,9 +133,6 @@ const AboutSection: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Bottom Stats Section */}
-       
       </div>
     </section>
   );
