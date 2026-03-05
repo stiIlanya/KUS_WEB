@@ -8,63 +8,24 @@ const partnersData = [
   {
     id: 1,
     name: "Schneider Electric",
-    logo: "https://via.placeholder.com/200x80/1E3A8A/FFFFFF?text=Schneider+Electric"
+    logo: "/images/logo-pln.png"
   },
   {
     id: 2,
     name: "Siemens",
-    logo: "https://via.placeholder.com/200x80/059669/FFFFFF?text=Siemens"
+    logo: "/images/logo-cimory.png"
   },
   {
     id: 3,
     name: "ABB",
-    logo: "https://via.placeholder.com/200x80/DC2626/FFFFFF?text=ABB"
+    logo: "/images/logo-indomarco.png"
   },
   {
     id: 4,
     name: "Mitsubishi Electric",
-    logo: "https://via.placeholder.com/200x80/7C3AED/FFFFFF?text=Mitsubishi"
+    logo: "/images/logo-multigriya.png"
   },
-  {
-    id: 5,
-    name: "Eaton",
-    logo: "https://via.placeholder.com/200x80/0891B2/FFFFFF?text=Eaton"
-  },
-  {
-    id: 6,
-    name: "Legrand",
-    logo: "https://via.placeholder.com/200x80/EA580C/FFFFFF?text=Legrand"
-  },
-  {
-    id: 7,
-    name: "Philips Lighting",
-    logo: "https://via.placeholder.com/200x80/1E40AF/FFFFFF?text=Philips"
-  },
-  {
-    id: 8,
-    name: "Omron",
-    logo: "https://via.placeholder.com/200x80/0F766E/FFFFFF?text=Omron"
-  },
-  {
-    id: 9,
-    name: "Rockwell Automation",
-    logo: "https://via.placeholder.com/200x80/BE123C/FFFFFF?text=Rockwell"
-  },
-  {
-    id: 10,
-    name: "GE Industrial",
-    logo: "https://via.placeholder.com/200x80/4338CA/FFFFFF?text=GE+Industrial"
-  },
-  {
-    id: 11,
-    name: "Honeywell",
-    logo: "https://via.placeholder.com/200x80/0284C7/FFFFFF?text=Honeywell"
-  },
-  {
-    id: 12,
-    name: "Phoenix Contact",
-    logo: "https://via.placeholder.com/200x80/047857/FFFFFF?text=Phoenix"
-  }
+
 ];
 
 const PartnersSection: React.FC = () => {
@@ -91,11 +52,9 @@ const PartnersSection: React.FC = () => {
             </p>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Kerjasama dengan Brand Terpercaya
+           Our Clients & Partners
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Kami bekerja sama dengan produsen peralatan listrik terkemuka dunia untuk memberikan solusi terbaik
-          </p>
+      
           <div className="w-24 h-1 bg-gradient-to-r from-[#161E54] to-[#2a3675] mx-auto rounded-full mt-6"></div>
         </div>
 
@@ -110,9 +69,9 @@ const PartnersSection: React.FC = () => {
               {duplicatedPartners.map((partner, index) => (
                 <div
                   key={`left-${index}`}
-                  className="flex-shrink-0 mx-8"
+                  className="flex-shrink-0 mx-4"
                 >
-                  <div className="w-48 h-24 flex items-center justify-center p-4">
+                  <div className="w-48 h-24 flex items-center justify-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:border-[#161E54]/30 transition-all duration-300">
                     <img
                       src={partner.logo}
                       alt={partner.name}
@@ -136,9 +95,9 @@ const PartnersSection: React.FC = () => {
               {duplicatedPartners.map((partner, index) => (
                 <div
                   key={`right-${index}`}
-                  className="flex-shrink-0 mx-8"
+                  className="flex-shrink-0 mx-4"
                 >
-                  <div className="w-48 h-24 flex items-center justify-center p-4">
+                  <div className="w-48 h-24 flex items-center justify-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:border-[#161E54]/30 transition-all duration-300">
                     <img
                       src={partner.logo}
                       alt={partner.name}
@@ -152,36 +111,7 @@ const PartnersSection: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="text-center group cursor-pointer">
-            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#161E54] to-[#2a3675] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
-              50+
-            </div>
-            <div className="text-gray-600 font-medium">Partner Brands</div>
-            <div className="h-1 w-16 bg-gradient-to-r from-[#161E54] to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-          </div>
-          <div className="text-center group cursor-pointer">
-            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#161E54] to-[#2a3675] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
-              100%
-            </div>
-            <div className="text-gray-600 font-medium">Genuine Products</div>
-            <div className="h-1 w-16 bg-gradient-to-r from-[#161E54] to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-          </div>
-          <div className="text-center group cursor-pointer">
-            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#161E54] to-[#2a3675] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
-              10+
-            </div>
-            <div className="text-gray-600 font-medium">Years Partnership</div>
-            <div className="h-1 w-16 bg-gradient-to-r from-[#161E54] to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-          </div>
-          <div className="text-center group cursor-pointer">
-            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#161E54] to-[#2a3675] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
-              24/7
-            </div>
-            <div className="text-gray-600 font-medium">Support Available</div>
-            <div className="h-1 w-16 bg-gradient-to-r from-[#161E54] to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-          </div>
-        </div>
+       
       </div>
 
       <style jsx>{`

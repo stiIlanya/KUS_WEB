@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Star, ArrowRight, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const HeroSection: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -18,11 +20,13 @@ const HeroSection: React.FC = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Blur and Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&h=1080&fit=crop"
-          alt="Electrical Installation"
-          className="w-full h-full object-cover"
-        />
+        <Image
+  src="/images/img1.jpeg"
+  alt="Electrical Installation"
+  fill
+  className="object-cover"
+  priority
+/>
         <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#2a3470]/80 via-blue-800/10 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#2a3470]/50 via-transparent to-blue-900/50"></div>
@@ -53,10 +57,11 @@ const HeroSection: React.FC = () => {
           {/* CTA Buttons */}
           <div className="mb-20 flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
             <button className="group relative bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg overflow-hidden shadow-2xl hover:shadow-blue-500/50 transition-all duration-500 hover:scale-105">
+              <Link href="/contact" >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 Hubungi Kami
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </span>
+              </span></Link>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </button>
             <button className="group relative border-2 border-white/50 text-white px-8 py-4 rounded-xl font-bold text-lg overflow-hidden backdrop-blur-sm hover:border-white transition-all duration-500 hover:scale-105 hover:shadow-2xl">

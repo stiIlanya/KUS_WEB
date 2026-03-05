@@ -83,11 +83,11 @@ const WhyChooseUs: React.FC = () => {
           <div className="inline-flex items-center gap-2 bg-[#161E54]/5 border border-[#161E54]/20 rounded-full px-5 py-2 mb-4">
             <Award className="w-4 h-4 text-[#161E54]" />
             <p className="text-[#161E54] font-semibold text-sm uppercase tracking-wider">
-              SOME REASONS
+              ALASAN
             </p>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Why Choose Us
+            Mengapa Memilih Kami?
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#161E54] to-[#2a3675] mx-auto rounded-full"></div>
         </div>

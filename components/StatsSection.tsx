@@ -5,8 +5,8 @@ import React, { useState, useEffect, useRef } from 'react';
 const statsData = [
   { value: 10, label: "Years of Experience", suffix: "+" },
   { value: 150, label: "Projects Completed", suffix: "+" },
-  { value: 50, label: "Clients", suffix: "+" },
-  { value: 30, label: "Professional Team", suffix: "+" }
+  { value: 20, label: "Clients", suffix: "+" },
+  { value: 20, label: "Professional Team", suffix: "+" }
 ];
 
 const useCounter = (end: number, duration = 2000, start = false) => {

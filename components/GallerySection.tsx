@@ -158,15 +158,15 @@ const GallerySection: React.FC = () => {
       id="gallery"
     >
       {/* Background Decorations */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-20"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-20" style={{backgroundColor: 'rgba(22, 30, 84, 0.2)'}}></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl opacity-20" style={{backgroundColor: 'rgba(22, 30, 84, 0.3)'}}></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-5 py-2 mb-4">
-            <ImageIcon className="w-4 h-4 text-blue-600" />
-            <p className="text-blue-700 font-semibold text-sm uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 rounded-full px-5 py-2 mb-4" style={{backgroundColor: 'rgba(22, 30, 84, 0.1)', borderWidth: '1px', borderStyle: 'solid', borderColor: 'rgba(22, 30, 84, 0.3)'}}>
+            <ImageIcon className="w-4 h-4" style={{color: '#161E54'}} />
+            <p className="font-semibold text-sm uppercase tracking-wider" style={{color: '#161E54'}}>
               OUR PROJECTS
             </p>
           </div>
@@ -176,7 +176,7 @@ const GallerySection: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Lihat berbagai proyek instalasi listrik yang telah kami kerjakan dengan standar kualitas dan keselamatan tertinggi
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 mx-auto rounded-full" style={{background: 'linear-gradient(to right, #161E54, #2a3d7a)'}}></div>
         </div>
 
         {/* Category Filter */}
@@ -187,9 +187,24 @@ const GallerySection: React.FC = () => {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 ${
                 selectedCategory === category
-                  ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg scale-105'
-                  : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
+                  ? 'text-white shadow-lg scale-105'
+                  : 'bg-white text-gray-700 hover:text-gray-900 border border-gray-200'
               }`}
+              style={selectedCategory === category ? {
+                background: 'linear-gradient(to right, #161E54, #0d1436)'
+              } : {}}
+              onMouseEnter={(e) => {
+                if (selectedCategory !== category) {
+                  e.currentTarget.style.backgroundColor = 'rgba(22, 30, 84, 0.05)';
+                  e.currentTarget.style.color = '#161E54';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (selectedCategory !== category) {
+                  e.currentTarget.style.backgroundColor = 'white';
+                  e.currentTarget.style.color = '#374151';
+                }
+              }}
             >
               {category}
             </button>
@@ -225,7 +240,7 @@ const GallerySection: React.FC = () => {
 
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-blue-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                  <span className="px-3 py-1 backdrop-blur-sm text-white text-xs font-semibold rounded-full" style={{backgroundColor: 'rgba(22, 30, 84, 0.9)'}}>
                     {item.category}
                   </span>
                 </div>
@@ -255,12 +270,15 @@ const GallerySection: React.FC = () => {
 
         {/* View All Button */}
         <div className="text-center">
-          <button className="group relative bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-bold text-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+          <button 
+            className="group relative text-white px-10 py-4 rounded-xl font-bold text-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
+            style={{background: 'linear-gradient(to right, #161E54, #0d1436)'}}
+          >
             <span className="relative z-10 flex items-center justify-center gap-2">
               View All Projects
               <Maximize2 className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+            <div className="absolute inset-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" style={{background: 'linear-gradient(to right, #0d1436, #050a1f)'}}></div>
           </button>
         </div>
       </div>
@@ -301,7 +319,7 @@ const GallerySection: React.FC = () => {
               />
               <div className="p-6 bg-white">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full">
+                  <span className="px-3 py-1 text-sm font-semibold rounded-full" style={{backgroundColor: 'rgba(22, 30, 84, 0.15)', color: '#161E54'}}>
                     {selectedImage.category}
                   </span>
                   <span className="text-gray-400">•</span>

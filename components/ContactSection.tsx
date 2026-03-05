@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MapPin, Mail, Phone, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { MapPin, Mail, Phone } from 'lucide-react';
+import Image from 'next/image';
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -30,24 +31,28 @@ const ContactSection: React.FC = () => {
     <section className="relative overflow-hidden">
       {/* Hero Section with Background Image */}
       <div className="relative h-[400px] flex items-center justify-center">
-        {/* Background Image with Overlay */}
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=600&fit=crop"
-            alt="Contact Background"
-            className="w-full h-full object-cover"
+          <Image
+            src="/images/cc.jpeg"
+            alt="Electrical Installation"
+            fill
+            className="object-cover"
+            priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#161E54]/90 via-[#1e2870]/85 to-[#161E54]/90"></div>
-          <div className="absolute inset-0 bg-[#161E54]/30"></div>
+          {/* Gradasi dari kiri bawah ke kanan atas */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#0a0f2e] via-[#161E54]/80 to-[#2a3675]/40"></div>
+          {/* Gradasi bawah ke atas untuk memperhalus transisi ke konten */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#161E54]/60 via-transparent to-transparent"></div>
         </div>
 
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-fadeIn">
-            Contact us
+            Hubungi Kami
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto animate-fadeIn" style={{ animationDelay: '0.2s' }}>
-            PT Karya Usaha Sinergi is ready to provide the right solution according to your needs
+            PT Karya Usaha Sinergi siap memberikan solusi yang tepat sesuai kebutuhan Anda
           </p>
         </div>
       </div>
@@ -59,7 +64,7 @@ const ContactSection: React.FC = () => {
             {/* Left Side - Contact Info */}
             <div className="lg:col-span-2 bg-gradient-to-br from-gray-50 to-white p-8 md:p-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Get in touch
+                Informasi Kontak
               </h2>
               <p className="text-gray-600 mb-10 leading-relaxed">
                 PT Karya Usaha Sinergi siap melayani kebutuhan instalasi listrik Anda dengan solusi terbaik dan profesional.
@@ -67,61 +72,42 @@ const ContactSection: React.FC = () => {
 
               {/* Contact Cards */}
               <div className="space-y-6">
-                {/* Head Office */}
+                {/* Kantor Pusat */}
                 <div className="flex items-start gap-4 group">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#161E54] to-[#2a3470] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Head Office</h3>
+                    <h3 className="font-bold text-gray-900 mb-1">Kantor Pusat</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                      Jalan Cempaka Wangi No 22<br />
-                      Jakarta - Indonesia
+                      Jl. Teratai No.58 RT.002 RW.004,<br />
+                      Kec. Bogor Barat, Kota Bogor
                     </p>
                   </div>
                 </div>
 
-                {/* Email Us */}
+                {/* Email */}
                 <div className="flex items-start gap-4 group">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#161E54] to-[#2a3470] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Email Us</h3>
-                    <p className="text-sm text-gray-600">hello@yourdomain.ltd</p>
-                    <p className="text-sm text-gray-600">hello@yourdomain.ltd</p>
+                    <h3 className="font-bold text-gray-900 mb-1">Email</h3>
+                    <p className="text-sm text-gray-600">karyausahasinergi@gmail.com</p>
+                    <p className="text-sm text-gray-600">karyausahasinergi.site</p>
                   </div>
                 </div>
 
-                {/* Call Us */}
+                {/* Telepon */}
                 <div className="flex items-start gap-4 group">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#161E54] to-[#2a3470] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Call Us</h3>
-                    <p className="text-sm text-gray-600">Phone : +6221.2002.2012</p>
-                    <p className="text-sm text-gray-600">Fax : +6221.2002.2013</p>
+                    <h3 className="font-bold text-gray-900 mb-1">Telepon</h3>
+                    <p className="text-sm text-gray-600">Telepon : (0251) 8324716</p>
+                    <p className="text-sm text-gray-600">Fax : (0251) 8324716</p>
                   </div>
-                </div>
-              </div>
-
-              {/* Social Media */}
-              <div className="mt-10 pt-8 border-t border-gray-200">
-                <h3 className="font-bold text-gray-900 mb-4">Follow our social media</h3>
-                <div className="flex gap-3">
-                  <a href="#" className="w-10 h-10 rounded-full bg-gradient-to-br from-[#161E54] to-[#2a3470] flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Facebook className="w-5 h-5" />
-                  </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-gradient-to-br from-[#161E54] to-[#2a3470] flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Instagram className="w-5 h-5" />
-                  </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-gradient-to-br from-[#161E54] to-[#2a3470] flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Twitter className="w-5 h-5" />
-                  </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-gradient-to-br from-[#161E54] to-[#2a3470] flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Linkedin className="w-5 h-5" />
-                  </a>
                 </div>
               </div>
             </div>
@@ -129,55 +115,55 @@ const ContactSection: React.FC = () => {
             {/* Right Side - Contact Form */}
             <div className="lg:col-span-3 p-8 md:p-12 bg-white">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                Send us a message
+                Kirim Pesan
               </h2>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name and Company Row */}
+                {/* Nama dan Perusahaan */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Name
+                      Nama
                     </label>
                     <input
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="Name"
+                      placeholder="Nama Anda"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#161E54] focus:border-transparent transition-all duration-300 bg-gray-50"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#161E54] focus:border-transparent transition-all duration-300 bg-gray-50 text-gray-900 placeholder-gray-400"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Company
+                      Perusahaan
                     </label>
                     <input
                       type="text"
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      placeholder="Company"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#161E54] focus:border-transparent transition-all duration-300 bg-gray-50"
+                      placeholder="Nama Perusahaan"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#161E54] focus:border-transparent transition-all duration-300 bg-gray-50 text-gray-900 placeholder-gray-400"
                     />
                   </div>
                 </div>
 
-                {/* Phone and Email Row */}
+                {/* Telepon dan Email */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone
+                      Telepon
                     </label>
                     <input
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="Phone"
+                      placeholder="Nomor Telepon"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#161E54] focus:border-transparent transition-all duration-300 bg-gray-50"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#161E54] focus:border-transparent transition-all duration-300 bg-gray-50 text-gray-900 placeholder-gray-400"
                     />
                   </div>
                   <div>
@@ -189,51 +175,51 @@ const ContactSection: React.FC = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="Email"
+                      placeholder="Alamat Email"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#161E54] focus:border-transparent transition-all duration-300 bg-gray-50"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#161E54] focus:border-transparent transition-all duration-300 bg-gray-50 text-gray-900 placeholder-gray-400"
                     />
                   </div>
                 </div>
 
-                {/* Subject */}
+                {/* Subjek */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject
+                    Subjek
                   </label>
                   <input
                     type="text"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="Subject"
+                    placeholder="Subjek Pesan"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#161E54] focus:border-transparent transition-all duration-300 bg-gray-50"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#161E54] focus:border-transparent transition-all duration-300 bg-gray-50 text-gray-900 placeholder-gray-400"
                   />
                 </div>
 
-                {/* Message */}
+                {/* Pesan */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
+                    Pesan
                   </label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Message"
+                    placeholder="Tulis pesan Anda di sini..."
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#161E54] focus:border-transparent transition-all duration-300 resize-none bg-gray-50"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#161E54] focus:border-transparent transition-all duration-300 resize-none bg-gray-50 text-gray-900 placeholder-gray-400"
                   />
                 </div>
 
-                {/* Submit Button */}
+                {/* Tombol Kirim */}
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-[#161E54] to-[#2a3470] text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-[#1e2870] hover:to-[#161E54] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  Send
+                  Kirim Pesan
                 </button>
               </form>
             </div>
@@ -243,7 +229,6 @@ const ContactSection: React.FC = () => {
 
       {/* Google Maps Section */}
       <div className="w-full h-[500px] relative">
-       
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15854.015198410543!2d106.75074703746296!3d-6.5841207614861545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c538931fd7f7%3A0xf550d7ae4a67f435!2sPT.%20KARYA%20USAHA%20SINERGI!5e0!3m2!1sen!2sus!4v1770018111251!5m2!1sen!2sus"
           width="100%"
